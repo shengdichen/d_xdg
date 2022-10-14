@@ -11,9 +11,9 @@
 
 XDG_DOCUMENTS_DIR="$HOME/xdg/Dox"
 
-XDG_MUSIC_DIR="$HOME/xdg/Med/Aud/"
-XDG_PICTURES_DIR="$HOME/xdg/Med/Pic/"
-XDG_VIDEOS_DIR="$HOME/xdg/Med/Vid/"
+XDG_MUSIC_DIR="$HOME/xdg/MDA/Aud/"
+XDG_PICTURES_DIR="$HOME/xdg/MDA/Pic/"
+XDG_VIDEOS_DIR="$HOME/xdg/MDA/Vid/"
 
 XDG_DESKTOP_DIR="$HOME/xdg/misc/Desktop/"
 XDG_DOWNLOAD_DIR="$HOME/xdg/misc/Downloads/"
