@@ -1,20 +1,20 @@
 _spawn() {
-    local xdg="${HOME}/xdg"
+    local xdg="${HOME}/xdg" alias_local="a"
     mkdir -p "${xdg}"
     (
         cd "${xdg}" || exit 3
 
-        mkdir -p "Dox/a"
+        mkdir -p "./Dox/${alias_local}"
 
-        mkdir -p "MDA/Aud/a"
-        mkdir -p "MDA/Vid/a"
-        mkdir -p "MDA/Lit/a"
-        mkdir -p "MDA/Pic/a"
+        mkdir -p "./MDA/Aud/${alias_local}"
+        mkdir -p "./MDA/Vid/${alias_local}"
+        mkdir -p "./MDA/Lit/${alias_local}"
+        mkdir -p "./MDA/Pic/${alias_local}"
 
-        mkdir -p "misc/Desktop/"
-        mkdir -p "misc/Downloads/"
-        mkdir -p "misc/Public/"
-        mkdir -p "misc/Templates/"
+        mkdir -p "./misc/Desktop/"
+        mkdir -p "./misc/Downloads/"
+        mkdir -p "./misc/Public/"
+        mkdir -p "./misc/Templates/"
     )
 }
 
