@@ -1,3 +1,5 @@
+#!/usr/bin/env dash
+
 _spawn() {
     local xdg="${HOME}/xdg" alias_local="a"
     mkdir -p "${xdg}"
