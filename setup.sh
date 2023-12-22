@@ -1,5 +1,8 @@
 #!/usr/bin/env dash
 
+SCRIPT_PATH="$(realpath "$(dirname "${0}")")"
+cd "${SCRIPT_PATH}" || exit 3
+
 _spawn() {
     local xdg="${HOME}/xdg" alias_local="a"
     mkdir -p "${xdg}"
@@ -21,17 +24,16 @@ _spawn() {
 }
 
 _stow() {
-    local pdir="${PWD##*/}"
     (
-        cd "../" || exit 3
-        stow -R \
+        cd "../" && stow -R \
             --target="${HOME}/" \
             --ignore="\.git.*" \
             --ignore="setup.sh" \
-            "${pdir}"
+            "$(basename "${SCRIPT_PATH}")"
     )
 }
 
 _spawn
 _stow
+unset SCRIPT_PATH
 unset -f _spawn _stow
