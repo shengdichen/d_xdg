@@ -4,7 +4,7 @@ SCRIPT_PATH="$(realpath "$(dirname "${0}")")"
 cd "${SCRIPT_PATH}" || exit 3
 
 _spawn() {
-    local xdg="${HOME}/xdg" alias_local="a"
+    local xdg="${HOME}/xyz" alias_local="a"
     mkdir -p "${xdg}"
     (
         cd "${xdg}" || exit 3
