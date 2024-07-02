@@ -3,13 +3,13 @@
 #   ->  XDG_xxx_DIR="$HOME/yyy"
 #   ->  XDG_xxx_DIR="/yyy"
 
-XDG_DOCUMENTS_DIR="$HOME/xdg/Dox"
+XDG_DOCUMENTS_DIR="$HOME/xyz/Dox"
 
-XDG_MUSIC_DIR="$HOME/xdg/MDA/Aud/"
-XDG_PICTURES_DIR="$HOME/xdg/MDA/Pic/"
-XDG_VIDEOS_DIR="$HOME/xdg/MDA/Vid/"
+XDG_MUSIC_DIR="$HOME/xyz/MDA/Aud/"
+XDG_PICTURES_DIR="$HOME/xyz/MDA/Pic/"
+XDG_VIDEOS_DIR="$HOME/xyz/MDA/Vid/"
 
-XDG_DESKTOP_DIR="$HOME/xdg/misc/Desktop/"
-XDG_DOWNLOAD_DIR="$HOME/xdg/misc/Downloads/"
-XDG_PUBLICSHARE_DIR="$HOME/xdg/misc/Public/"
-XDG_TEMPLATES_DIR="$HOME/xdg/misc/Templates/"
+XDG_DESKTOP_DIR="$HOME/xyz/misc/Desktop/"
+XDG_DOWNLOAD_DIR="$HOME/xyz/misc/Downloads/"
+XDG_PUBLICSHARE_DIR="$HOME/xyz/misc/Public/"
+XDG_TEMPLATES_DIR="$HOME/xyz/misc/Templates/"

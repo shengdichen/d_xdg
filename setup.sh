@@ -4,7 +4,7 @@ SCRIPT_PATH="$(realpath "$(dirname "${0}")")"
 cd "${SCRIPT_PATH}" || exit 3
 
 _spawn() {
-    local xdg="${HOME}/xdg" alias_local="a"
+    local xdg="${HOME}/xyz" alias_local="a"
     mkdir -p "${xdg}"
     (
         cd "${xdg}" || exit 3
@@ -21,6 +21,13 @@ _spawn() {
         mkdir -p "./misc/Public/"
         mkdir -p "./misc/Templates/"
     )
+
+    local _local="${HOME}/.local"
+    mkdir -p "${_local}/bin/"
+    mkdir -p "${_local}/lib/"
+    mkdir -p "${_local}/script/"
+    mkdir -p "${_local}/share/applications"
+    mkdir -p "${_local}/state/"
 }
 
 _stow() {
