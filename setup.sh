@@ -3,25 +3,23 @@
 SCRIPT_PATH="$(realpath "$(dirname "${0}")")"
 cd "${SCRIPT_PATH}" || exit 3
 
-_spawn() {
-    local xdg="${HOME}/xyz" alias_local="a"
-    mkdir -p "${xdg}"
-    (
-        cd "${xdg}" || exit 3
+__spawn_xyz() {
+    local _xdg="${HOME}/xyz" _label_local="a"
 
-        mkdir -p "./Dox/${alias_local}"
+    mkdir -p "${_xdg}/Dox/${_label_local}"
 
-        mkdir -p "./MDA/Aud/${alias_local}"
-        mkdir -p "./MDA/Vid/${alias_local}"
-        mkdir -p "./MDA/Lit/${alias_local}"
-        mkdir -p "./MDA/Pic/${alias_local}"
+    mkdir -p "${_xdg}/MDA/Aud/${_label_local}"
+    mkdir -p "${_xdg}/MDA/Vid/${_label_local}"
+    mkdir -p "${_xdg}/MDA/Lit/${_label_local}"
+    mkdir -p "${_xdg}/MDA/Pic/${_label_local}"
 
-        mkdir -p "./misc/Desktop/"
-        mkdir -p "./misc/Downloads/"
-        mkdir -p "./misc/Public/"
-        mkdir -p "./misc/Templates/"
-    )
+    mkdir -p "${_xdg}/misc/Desktop/"
+    mkdir -p "${_xdg}/misc/Downloads/"
+    mkdir -p "${_xdg}/misc/Public/"
+    mkdir -p "${_xdg}/misc/Templates/"
+}
 
+__spawn_local() {
     local _local="${HOME}/.local"
     mkdir -p "${_local}/bin/"
     mkdir -p "${_local}/lib/"
@@ -30,7 +28,7 @@ _spawn() {
     mkdir -p "${_local}/state/"
 }
 
-_stow() {
+__stow() {
     (
         cd "../" && stow -R \
             --target="${HOME}/" \
@@ -40,7 +38,6 @@ _stow() {
     )
 }
 
-_spawn
-_stow
-unset SCRIPT_PATH
-unset -f _spawn _stow
+__spawn_xyz
+__spawn_local
+__stow
