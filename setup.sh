@@ -13,19 +13,19 @@ __spawn_xyz() {
     mkdir -p "${_xdg}/MDA/Lit/${_label_local}"
     mkdir -p "${_xdg}/MDA/Pic/${_label_local}"
 
-    mkdir -p "${_xdg}/misc/Desktop/"
-    mkdir -p "${_xdg}/misc/Downloads/"
-    mkdir -p "${_xdg}/misc/Public/"
-    mkdir -p "${_xdg}/misc/Templates/"
+    mkdir -p "${_xdg}/misc/Desktop"
+    mkdir -p "${_xdg}/misc/Downloads"
+    mkdir -p "${_xdg}/misc/Public"
+    mkdir -p "${_xdg}/misc/Templates"
 }
 
 __spawn_local() {
     local _local="${HOME}/.local"
-    mkdir -p "${_local}/bin/"
-    mkdir -p "${_local}/lib/"
-    mkdir -p "${_local}/script/"
+    mkdir -p "${_local}/bin"
+    mkdir -p "${_local}/lib"
+    mkdir -p "${_local}/script"
     mkdir -p "${_local}/share/applications"
-    mkdir -p "${_local}/state/"
+    mkdir -p "${_local}/state"
 }
 
 __stow() {
