@@ -13,3 +13,5 @@ XDG_DESKTOP_DIR="$HOME/xyz/misc/Desktop/"
 XDG_DOWNLOAD_DIR="$HOME/xyz/misc/Downloads/"
 XDG_PUBLICSHARE_DIR="$HOME/xyz/misc/Public/"
 XDG_TEMPLATES_DIR="$HOME/xyz/misc/Templates/"
+
+# vim: filetype=conf
